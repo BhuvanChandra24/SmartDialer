@@ -17,14 +17,9 @@ import { Area, AreaChart, Bar, BarChart, CartesianGrid, ResponsiveContainer, Too
 const navItems = [
   { key: 'overview', label: 'Overview', icon: Gauge },
   { key: 'operations', label: 'Live Operations', icon: Activity },
-  { key: 'campaigns', label: 'Campaigns', icon: BriefcaseBusiness },
-  { key: 'agents', label: 'Agents', icon: Users },
-  { key: 'calls', label: 'Call Records', icon: Phone },
-  { key: 'pacing', label: 'Predictive Pacing', icon: Waves },
   { key: 'safety', label: 'Safety Controller', icon: Shield },
   { key: 'provider', label: 'Provider Health', icon: Siren },
   { key: 'simulation', label: 'Simulation Lab', icon: MonitorCog },
-  { key: 'diagnostics', label: 'Tests & Diagnostics', icon: Bell },
 ]
 
 async function apiFetch<T>(path: string, options?: RequestInit): Promise<T> {
@@ -453,22 +448,12 @@ function App() {
         return renderOverview()
       case 'operations':
         return renderOperations()
-      case 'campaigns':
-        return renderOperations()
-      case 'agents':
-        return renderOperations()
-      case 'calls':
-        return renderOperations()
-      case 'pacing':
-        return renderPacing()
       case 'safety':
         return renderSafety()
       case 'provider':
         return renderProvider()
       case 'simulation':
         return renderSimulation()
-      case 'diagnostics':
-        return renderDiagnostics()
       default:
         return renderOverview()
     }
